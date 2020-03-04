@@ -1,4 +1,4 @@
-# hostnamesapi
+# Hostnames API (hostnamesapi)
 
 JavaScript examples for working with the new hostnames API on Fly
 
