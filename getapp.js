@@ -17,10 +17,10 @@ async function main() {
 
     const query = `
         query($appName: String!) {
-			app(name: $appName) {
+            app(name: $appName) {
                     id
-				}
-			}`
+                }
+            }`
 
     const variables = { appName: argv.appname };
 
