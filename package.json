@@ -1,0 +1,15 @@
+{
+  "name": "flyhosts",
+  "version": "1.0.0",
+  "description": "Examples for Fly Custom Host API",
+  "main": "flyhosts.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Dj",
+  "license": "MIT",
+  "dependencies": {
+    "graphql-request": "^1.8.2",
+    "yargs": "^15.1.0"
+  }
+}
