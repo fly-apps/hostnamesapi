@@ -18,7 +18,7 @@ async function main() {
     const query = `
         query($appName: String!) {
 			app(name: $appName) {
-                id
+                    id
 				}
 			}`
 
