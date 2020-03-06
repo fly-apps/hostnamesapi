@@ -21,7 +21,9 @@ async function main() {
         app(name: $appName) {
             certificate(hostname: $hostname) {
                 check
+                configured
                 acmeDnsConfigured
+                acmeAlpnConfigured
                 certificateAuthority
                 createdAt
                 dnsProvider

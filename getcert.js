@@ -20,7 +20,9 @@ async function main() {
     query($appName: String!, $hostname: String!) {
         app(name: $appName) {
             certificate(hostname: $hostname) {
+                configured
                 acmeDnsConfigured
+                acmeAlpnConfigured
                 certificateAuthority
                 createdAt
                 dnsProvider

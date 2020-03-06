@@ -20,10 +20,14 @@ async function main() {
     mutation($appId: ID!, $hostname: String!) {
         addCertificate(appId: $appId, hostname: $hostname) {
             certificate {
+                configured
                 acmeDnsConfigured
+                acmeAlpnConfigured
                 certificateAuthority
                 certificateRequestedAt
                 dnsProvider
+                dnsValidationInstructions
+                dnsValidationHostname
                 dnsValidationTarget
                 hostname
                 id

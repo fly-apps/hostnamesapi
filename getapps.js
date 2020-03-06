@@ -1,10 +1,7 @@
 #!/usr/bin/env node
 const { request, GraphQLClient } = require('graphql-request')
 
-const argv = require('yargs')
-    .demandOption(["appname"])
-    .alias('a', 'appname')
-    .argv;
+const argv = require('yargs').argv;
 
 async function main() {
     const endpoint = "https://fly.io/api/v2/graphql"
@@ -16,13 +13,16 @@ async function main() {
     })
 
     const query = `
-        query($appName: String!) {
-            app(name: $appName) {
+        query {
+            apps {
+                nodes {
                     id
+                    name
+                    }
                 }
             }`
 
-    const variables = { appName: argv.appname };
+    const variables = {};
 
     const data = await FlyAPIClient.request(query, variables)
     console.log(JSON.stringify(data, undefined, 2));
