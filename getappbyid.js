@@ -7,7 +7,7 @@ const argv = require('yargs')
     .argv;
 
 async function main() {
-    const endpoint = "https://fly.io/api/v2/graphql"
+    const endpoint="https://api.fly.io/graphql"
 
     const FlyAPIClient = new GraphQLClient(endpoint, {
         headers: {
